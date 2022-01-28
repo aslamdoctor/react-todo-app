@@ -35,7 +35,13 @@ function App() {
 	// All tasks
 	const [tasks, setTasks] = React.useState([]);
 
-	console.log(task);
+	function deleteTask(index) {
+		setTasks((prevState) => {
+			const tempTasks = [...prevState];
+			tempTasks.splice(index, 1);
+			return tempTasks;
+		});
+	}
 
 	return (
 		<div className="App">
@@ -52,7 +58,7 @@ function App() {
 					value={task.theTask}
 				/>
 
-				<Todos tasks={tasks} />
+				<Todos tasks={tasks} onDeleteTask={deleteTask} />
 			</div>
 		</div>
 	);

@@ -8,12 +8,11 @@ export default function Task(props) {
 
 	const doneClass = done ? 'done' : '';
 	return (
-		<li
-			className={doneClass}
-			onClick={handleDoneClick}
-			title="Click to mark/unmark done"
-		>
-			{props.task}
+		<li className={doneClass}>
+			<span onClick={handleDoneClick} title="Click to mark/unmark done">
+				{props.task}
+			</span>
+			<button onClick={props.onDeleteTask}>X</button>
 		</li>
 	);
 }

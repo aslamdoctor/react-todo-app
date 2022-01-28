@@ -53,10 +53,21 @@ input {
 	padding: 10px 0;
 	border-bottom: 1px solid #e6e6e6;
 	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
 }
 .container ul li.done {
 	text-decoration: line-through;
 }
 .container ul li:last-child {
 	border-bottom: none;
+}
+.container ul li button {
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	border: none;
+	background-color: red;
+	color: #fff;
+	cursor: pointer;
 }
